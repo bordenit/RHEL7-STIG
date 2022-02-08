@@ -18,4 +18,5 @@ galaxy_info:
 collections:
   - community.general
   - community.crypto
+  - ansible.posix
 dependencies: []
