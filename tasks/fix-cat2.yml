@@ -4242,6 +4242,8 @@
       name: ssh_sysadm_login
       persistent: true
       state: "{{ rhel7stig_ssh_sysadm_login_state }}"
+  vars:
+      - ansible_python_interpreter: "{{ python2_bin }}"
   when:
       - rhel_07_020022
   tags:
