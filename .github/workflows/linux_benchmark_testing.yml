@@ -101,6 +101,7 @@ jobs:
         uses: arillso/action.playbook@master
         with:
           playbook: site.yml
+          extra_vars:  "rhel7stig_bootloader_password_hash='grub.pbkdf2.sha512.thishasbeenchangedfortesting'"
           inventory: .github/workflows/hosts.yml
           galaxy_file: collections/requirements.yml
           private_key: ${{ secrets.SSH_PRV_KEY }}
