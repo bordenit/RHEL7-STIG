@@ -12,4 +12,4 @@
       state: "{{ audit_present | ternary('present', 'absent') }}"
   vars:
       audit_present: "{{ item.create | default(vars['rhel_07_' + item.id]) }}"
-  notify: restart auditd
+  notify: restart "{{ rhel7stig_auditd_daemon  }}"
